@@ -2,13 +2,13 @@ function init() {
     
 }
 
-async function await_init() {
-    var workJson = await getResponse()
-    console.log(workJson)
+async function async_init() {
+    workJson = await getResponse()
+    buildPage()
 }
 
 async function getResponse() {
-    var textResponse = await fetch('htps://jsonplaceholder.typicode.com/users/1')
+    var textResponse = await fetch('https://jsonplaceholder.typicode.com/users')
     .catch(error => {
         return null
     })
@@ -16,5 +16,11 @@ async function getResponse() {
     return responseJson
 }
 
+function buildPage() {
+
+    
+
+}
+
 init()
-await_init()
+async_init()
