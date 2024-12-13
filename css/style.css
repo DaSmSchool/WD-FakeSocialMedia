@@ -1,6 +1,55 @@
+
+/* CSS HEX */
+:root {
+    --lavender-web: #d8d3dfff;
+    --rebecca-purple: #543f86ff;
+    --russian-violet: #2d1a5bff;
+    --tekhelet: #422b79ff;
+    --medium-slate-blue: #8d6adfff;
+}
+
+#title-name {
+    font-size: 4rem;
+    text-align: right;
+    color: var(--russian-violet);
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    line-height: 3.5rem;
+    flex-grow: 1;
+}
+
+#title-container {
+    display: flex;
+    /*transform: rotate(5deg);*/
+    height: 6dvh
+}
+
+#title-note-icon {
+    color: var(--tekhelet);
+    width: 4rem;
+    flex-grow: 1;
+}
+
 #space {
     background-color: aqua;
     padding: 30px;
     border: 10px, black, solid;
     border-radius: 20px;
+}
+
+#posting-space {
+    margin: 2.5%;
+    border: var(--russian-violet) 12px solid;
+    border-radius: 50px;
+    background-color: rebeccapurple;
+    padding: 50px;
+}
+
+body hr {
+    overflow: hidden;
+    margin-top: 50px;
+    width: 100%;
+    background-color: black;
+    height: 3px
 }
