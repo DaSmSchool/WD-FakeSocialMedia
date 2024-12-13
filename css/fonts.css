@@ -165,4 +165,17 @@
     font-weight: 900;
     font-style: italic;
   }
-    
+  
+  .wix-madefor-text-regular {
+    font-family: "Wix Madefor Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .wix-madefor-text-italic {
+    font-family: "Wix Madefor Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+  }

@@ -8,6 +8,10 @@
     --medium-slate-blue: #8d6adfff;
 }
 
+body {
+    background-color: var(--lavender-web);
+}
+
 #title-name {
     font-size: 4rem;
     text-align: right;
@@ -39,11 +43,28 @@
 }
 
 #posting-space {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
     margin: 2.5%;
+    justify-items: center;
     border: var(--russian-violet) 12px solid;
     border-radius: 50px;
     background-color: rebeccapurple;
     padding: 50px;
+}
+
+.post-container {
+    background-color: var(--lavender-web);
+    min-width: 100px;
+    max-width: 500px;
+    border: var(--russian-violet) solid, 8px;
+    border-radius: 20px;
+    padding: 20px
+}
+
+.post-title {
+    font-family: Wix Madefor;
 }
 
 body hr {
