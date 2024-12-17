@@ -12,6 +12,14 @@ body {
     background-color: var(--lavender-web);
 }
 
+body hr {
+    overflow: hidden;
+    margin-top: 50px;
+    width: 100%;
+    background-color: black;
+    height: 3px
+}
+
 #title-name {
     font-size: 4rem;
     text-align: right;
@@ -42,16 +50,22 @@ body {
     border-radius: 20px;
 }
 
-#posting-space {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
+#main-space {
     margin: 2.5%;
-    justify-items: center;
+    
     border: var(--russian-violet) 12px solid;
     border-radius: 50px;
     background-color: rebeccapurple;
     padding: 50px;
+    justify-items: center;
+}
+
+#posting-space {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    width: 100%;
 }
 
 .post-container {
@@ -60,17 +74,46 @@ body {
     max-width: 500px;
     border: var(--russian-violet) solid, 8px;
     border-radius: 20px;
-    padding: 20px
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.post-username {
+    margin-top: 0;
 }
 
 .post-title {
     font-family: Wix Madefor;
 }
 
-body hr {
-    overflow: hidden;
-    margin-top: 50px;
-    width: 100%;
-    background-color: black;
-    height: 3px
+#load-posts-button {
+    border: var(--russian-violet), 5px, solid;
+    background-color: var(--medium-slate-blue);
+    color: var(--russian-violet);
+    font-size: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    user-select: none;
+}
+
+#load-posts-button:hover {
+    background-color: var(--rebecca-purple);
+    cursor: pointer;
+}
+
+#load-posts-button:active {
+    background-color: var(--tekhelet);
+    cursor: pointer;
+}
+
+#add-post-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 40px;
+    padding: 20px;
+    font-size: 18px;
+    border: var(--tekhelet) 7px solid;
+    background-color: var(--medium-slate-blue);
+    border-radius: 20px;
 }

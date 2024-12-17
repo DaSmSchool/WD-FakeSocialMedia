@@ -19,6 +19,8 @@
 </head>
 <body>
     
+    <div id="add-post-btn" class="wix-madefor-text-bold">Add Post</div>
+
     <div id="title-container">
         <h1 id="title-name" class="poppins-bold">SocialNotes</h1>
         
@@ -30,13 +32,17 @@
     </div>
 
     <hr>
-
-    <section id="posting-space">
-        <div class="post-container">
-            <h1 class="post-title"></h1>
-            <p class="post-user"></p>
-            <p class="post-content"></p>
-        </div>
+    
+    <section id="main-space">
+        <section id="posting-space">
+            <div class="post-container">
+                <h1 class="post-title"></h1>
+                <p class="post-user"></p>
+                <p class="post-content"></p>
+            </div>
+            
+        </section>
+        <button id="load-posts-button" class="wix-madefor-text-bold" onclick="addPosts()">Load More Posts</button>
     </section>
 
     <script src="js/script.js"></script>

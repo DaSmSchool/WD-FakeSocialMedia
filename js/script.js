@@ -3,16 +3,16 @@ var chosenPosts = []
 var cachedUsers = {}
 
 function init() {
-    
+    $("#posting-space").html("")
 }
 
 async function async_init() {
-    await get_posts()
+    await getPosts()
 
     buildPage()
 }
 
-async function get_posts() {
+async function getPosts() {
     for (let i=1; i<=10; i++) {
         postJson = await getResponse('https://jsonplaceholder.typicode.com/posts/' + Math.floor(Math.random()*100+1))
         chosenPosts.push(postJson)
@@ -46,7 +46,8 @@ function updatePostsPage() {
         */
         
         var title = `<h1 class="post-title poppins-bold">${chosenPosts[post].title}</h1>`
-        var user = `<p class="post-user wix-madefor-text-italic">${cachedUsers["user"+chosenPosts[post].userId].username}</p>`
+        var user = `<p class="post-username wix-madefor-text-bold">${cachedUsers["user"+chosenPosts[post].userId].name}</p>`
+        var username = `<p class="post-user wix-madefor-text-italic">${cachedUsers["user"+chosenPosts[post].userId].username}</p>`
         var content = `<p class="post-content wix-madefor-text-regular">${chosenPosts[post].body}</p>`
         
         var postContainer = document.createElement("div")
@@ -54,7 +55,7 @@ function updatePostsPage() {
         postContainer.id = "post"+post
 
         $("#posting-space").append(postContainer)
-        $("#post"+post).append(title, user, content)
+        $("#post"+post).append(title, user, username, content)
     }
 }
 
@@ -62,6 +63,11 @@ function buildPage() {
 
     updatePostsPage()
 
+}
+
+async function addPosts() {
+    await getPosts()
+    updatePostsPage()
 }
 
 init()
