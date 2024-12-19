@@ -113,7 +113,18 @@ body hr {
     margin: 40px;
     padding: 20px;
     font-size: 18px;
-    border: var(--tekhelet) 7px solid;
+    border: var(--russian-violet) 7px solid;
     background-color: var(--medium-slate-blue);
     border-radius: 20px;
+    user-select: none;
+}
+
+#add-post-btn:hover {
+    background-color: var(--rebecca-purple);
+    cursor: pointer;
+}
+
+#add-post-btn:active {
+    background-color: var(--tekhelet);
+    cursor: pointer;
 }
